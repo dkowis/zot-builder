@@ -24,7 +24,7 @@ jobs:
         with:
           repository: rchincha/zot
           ref: docker
-          
+
       - name: Log in to GitHub Docker Registry
         uses: docker/login-action@v3
         with:
@@ -102,6 +102,10 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
+        with:
+          repository: rchincha/zot
+          ref: docker
+
       - name: Log in to GitHub Docker Registry
         uses: docker/login-action@v3
         with:
